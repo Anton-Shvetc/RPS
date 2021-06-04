@@ -6,17 +6,50 @@
 body {
   background: rgb(33, 10, 97);
 }
+.wrapper {
+  margin: 0 auto;
+  width: 510px;
+}
 
-.score-table {
+.score {
   width: 510px;
   height: 100px;
   border: 1px solid #fff;
   border-radius: 10px;
   margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.score__title {
+  color: #fff;
+}
+.score__box {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #000;
+}
+
+#rock,
+#scissors,
+#paper {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
 }
 
 #rock:hover,
 #scissors:hover,
 #paper:hover {
   cursor: pointer;
+}
+
+.fightPlace {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottonOff {
+  opacity: 0.3;
+  color: #fff;
 }

@@ -9,16 +9,34 @@
   </head>
   <body>
     <main>
-      <div class="score-table"></div>
+      <section class="wrapper">
+        <div class="score">
+          <div class="score__title">
+            <h6>Paper</h6>
+            <h6>Sscissors</h6>
+            <h6>Rock</h6>
+          </div>
+          <div class="score__box">
+            <h6>Score</h6>
+            <p>12</p>
+          </div>
+        </div>
+        <div class="fightPlace">
+          <div>
+            <div id="paper"><img src="/img/1.png" alt="" /></div>
+            <div id="scissors"><img src="/img/2.png" alt="" /></div>
+            <div id="rock"><img src="/img/0.png" alt="" /></div>
+          </div>
 
-      <div>
-        <div id="paper"><img src="/img/Paper.png" alt="" /></div>
-        <div id="scissors"><img src="/img/Scissors.png" alt="" /></div>
-        <div id="rock"><img src="/img/Rock.png" alt="" /></div>
-      </div>
+          <div id="rules"><h6>Rules1</h6></div>
 
-      <div id="rules"><h6>Rules1</h6></div>
+          <div>
+            <div id="botChoose"></div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="JS/main.js"></script>
+    <!-- <script src="JS/main.js"></script> -->
+    <script src="JS/BotLogic.js"></script>
   </body>
 </html>
