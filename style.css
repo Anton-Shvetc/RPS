@@ -32,7 +32,8 @@ body {
 
 #rock,
 #scissors,
-#paper {
+#paper,
+.botAnswer {
   width: 200px;
   height: 200px;
   padding: 10px;
@@ -45,11 +46,18 @@ body {
 }
 
 .fightPlace {
-  display: flex;
   justify-content: space-between;
 }
 
 .bottonOff {
   opacity: 0.3;
   color: #fff;
+}
+
+#paperBox,
+#rockBox,
+#scissorsBox {
+  width: 510px;
+  display: flex;
+  justify-content: space-between;
 }
