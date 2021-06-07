@@ -13,7 +13,7 @@ let Scissors = document.getElementById('scissors');
 let Rock = document.getElementById('rock');
 
 let paperBox = document.getElementById('paperBox');
-
+let counter = 0;
 
 Paper.addEventListener('click', paperСhoice);
 Scissors.addEventListener('click', scissorsСhoice);
@@ -35,16 +35,15 @@ Scissors.classList.add("bottonOff");
 CreateEl();
 paperBox.appendChild(one);
  StartBot();
- Win();
+ paperWin();
  
 
- 
- 
+  
 //  paperBox.removeChild(one);
 
-
-
  }
+
+
  function scissorsСhoice(){
 Scissors.classList.remove("bottonOff");
 Rock.classList.add("bottonOff");
@@ -52,7 +51,7 @@ Paper.classList.add("bottonOff");
 CreateEl();
 scissorsBox.appendChild(one);
  StartBot();
-//  Win();
+scissorWin();
 
  }
  function rockСhoice(){
@@ -62,7 +61,7 @@ Scissors.classList.add("bottonOff");
 CreateEl();
 rockBox.appendChild(one);
  StartBot();
-//  Win();
+rockWin();
 
  }
 
@@ -82,9 +81,9 @@ let timesRun = 0;
     }
     
 
-// imagez = ('<img src="img/'+sha+'.png" border="0" />');
 
-document.getElementById("botСhoice").innerHTML ='<img src="img/'+sha()+'.png" border="0"  id="test"/>';
+
+document.getElementById("botСhoice").innerHTML ='<img src="img/'+sha()+'.png" border="0"  id="botImg"/>';
 
 
 }, 100)
@@ -93,24 +92,76 @@ document.getElementById("botСhoice").innerHTML ='<img src="img/'+sha()+'.png" b
 
 }
 
-function Win(){
+function paperWin(){
      setTimeout(function(){
 console.log(document.getElementById("botСhoice"));
-let s = document.getElementById("test");
-// console.log("The name is "+ s.src.substr(s.src.lastIndexO f("/") +1, s.src.length));
+let s = document.getElementById("botImg");
+let botChoiceStop = s.src.substr(s.src.lastIndexOf("/")+1,s.src.length);
 
 
-// alert("The Soursce is "+ s.src);
-let RockStop = s.src.substr(s.src.lastIndexOf("/")+1,s.src.length);
-
-
- if (RockStop == '0.png') {
+ if (botChoiceStop == '0.png') {
     alert("You Win!");
-} else if (RockStop == '2.png') {
+    counter ++;
+    console.log(counter);
+} else if (botChoiceStop == '2.png') {
       alert("You Lose!");
+    counter --;
+    console.log(counter);
 } else {
     alert("Draw!");
+   
 }
+console.log(counter);
 paperBox.removeChild(one);
  }, 2000)
 }
+
+function scissorWin(){
+     setTimeout(function(){
+console.log(document.getElementById("botСhoice"));
+let s = document.getElementById("botImg");
+let botChoiceStop = s.src.substr(s.src.lastIndexOf("/")+1,s.src.length);
+
+
+ if (botChoiceStop == '1.png') {
+    alert("You Win!");
+    counter ++;
+    console.log(counter);
+} else if (botChoiceStop == '0.png') {
+      alert("You Lose!");
+    counter --;
+    console.log(counter);
+} else {
+    alert("Draw!");
+   
+}
+console.log(counter);
+scissorsBox.removeChild(one);
+ }, 2000)
+}
+
+function rockWin(){
+     setTimeout(function(){
+console.log(document.getElementById("botСhoice"));
+let s = document.getElementById("botImg");
+let botChoiceStop = s.src.substr(s.src.lastIndexOf("/")+1,s.src.length);
+
+
+ if (botChoiceStop == '2.png') {
+    alert("You Win!");
+    counter ++;
+    console.log(counter);
+} else if (botChoiceStop == '1.png') {
+      alert("You Lose!");
+    counter --;
+    console.log(counter);
+} else {
+    alert("Draw!");
+   
+}
+console.log(counter);
+rockBox.removeChild(one);
+ }, 2000)
+}
+
+
