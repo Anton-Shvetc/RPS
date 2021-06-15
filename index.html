@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="modal.css" /> -->
   </head>
   <body>
     <main>
       <section class="wrapper">
         <div class="score">
-          <div class="score__title">
+          <div class="game__name">
             <h6>Paper</h6>
             <h6>Sscissors</h6>
             <h6>Rock</h6>
           </div>
           <div class="score__box">
-            <h6>Score</h6>
-            <p>12</p>
+            <span id="score__title">Score</span> <br />
+            <span id="score">0</span>
           </div>
         </div>
         <div class="fightPlace">
@@ -35,15 +37,22 @@
             <!-- <div id="botСhoice"></div> -->
           </div>
 
-          <div id="rules"><h6>Rules1</h6></div>
-
           <div>
             <!-- <div id="botСhoice"></div> -->
+          </div>
+        </div>
+
+        <button id="rules">Правила</button>
+        <div id="rules__modal" class="modal">
+          <div class="rules__content">
+            <span class="rules__close">×</span>
+            <img src="img/rules.png" alt="" />
           </div>
         </div>
       </section>
     </main>
     <!-- <script src="JS/main.js"></script> -->
     <script src="JS/BotLogic.js"></script>
+    <script src="/JS/modal.js"></script>
   </body>
 </html>
